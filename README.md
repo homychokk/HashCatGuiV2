@@ -54,3 +54,10 @@ python hashcat_core/hashcat_pyqt.py
 * `wordlists/` - A dedicated folder for your password dictionaries.
 * `screenshot.png` - Preview image.
 * `requirements.txt` - Python dependencies.
+
+---
+
+## 👨‍💻 Author / Credits
+
+Developed by **[homychokk](https://github.com/homychokk)**. 
+*If you like this project, feel free to give it a ⭐ on GitHub!*
