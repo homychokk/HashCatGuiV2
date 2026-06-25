@@ -1,63 +1,63 @@
 # Hashcat Advanced GUI
 
-A sleek, modern, and user-friendly Graphical User Interface for Hashcat, built with Python and PyQt6. This tool is designed to make password cracking, specifically for Wi-Fi (WPA/WPA2) handshakes, accessible and visually appealing.
+Стильный, современный и удобный графический интерфейс (GUI) для Hashcat, написанный на Python и PyQt6. Эта программа создана для того, чтобы сделать подбор паролей (в частности, для Wi-Fi хендшейков WPA/WPA2) простым и визуально приятным.
 
 ![Screenshot](screenshot.png)
 
-## Features
-- **Dark Theme:** Modern aesthetic that's easy on the eyes.
-- **Portable:** Includes everything needed out of the box (requires no installation if using the release `.exe`).
-- **Dynamic Wordlists:** Supports selecting and combining multiple dictionaries simultaneously.
-- **Smart Output:** Real-time, color-coded terminal output inside the GUI. Successfully cracked passwords are highlighted in bright green!
+## Функционал
+- **Тёмная тема:** Современный дизайн, от которого не устают глаза.
+- **Портативность:** Работает "из коробки" (не требует установки, если использовать `.exe` версию из релизов).
+- **Поддержка нескольких словарей:** Позволяет выбрать сразу несколько текстовых файлов с паролями для объединения их в одну мощную атаку.
+- **Умный вывод:** Цветной терминал прямо внутри интерфейса. Успешно подобранные пароли ярко подсвечиваются зеленым цветом!
 
-## 🚀 How to Use (For Windows Users)
+## 🚀 Как использовать (Для Windows)
 
-### The Easy Way (Pre-compiled)
-1. Go to the [Releases page](../../releases) and download `HashcatGUI.exe`.
-2. Place the `.exe` in a folder (for example, `C:\HashcatGUI`).
-3. Make sure you have the `hashcat_core` and `wordlists` folders next to your `.exe` (you can download the source code `.zip` for these folders).
-4. Run `HashcatGUI.exe`.
+### Самый простой способ (Готовая программа)
+1. Перейдите на страницу [Релизов (Releases)](../../releases) и скачайте файл `HashcatGUI.exe`.
+2. Поместите `.exe` файл в любую удобную папку (например, `C:\HashcatGUI`).
+3. Убедитесь, что рядом с вашим `.exe` файлом лежат папки `hashcat_core` и `wordlists` (вы можете скачать их вместе с исходным кодом проекта).
+4. Запустите `HashcatGUI.exe`.
 
-### How to Crack a Wi-Fi Password:
-1. **Get your Hash:** You need a `.hc22000` file. If you have a `.pcap` or `.cap` file from a Wi-Fi handshake capture, convert it using the official [Hashcat Online Converter](https://hashcat.net/cap2hashcat/).
-2. **Select Hash:** In the GUI, click "Browse" next to Hash File and select your `.hc22000` file.
-3. **Select Dictionaries:** Click "Browse" next to Wordlist(s) and pick one or more `.txt` files containing passwords (e.g., from the `wordlists` folder).
-4. **Start Attack:** Click the green **Start Attack** button and wait for the results!
+### Как взломать пароль от Wi-Fi:
+1. **Подготовка хэша:** Вам понадобится файл формата `.hc22000`. Если у вас есть файл перехвата хендшейка (`.pcap` или `.cap`), конвертируйте его с помощью официального [Онлайн конвертера Hashcat](https://hashcat.net/cap2hashcat/).
+2. **Выбор хэша:** В программе нажмите кнопку "Browse" напротив "Hash File" и выберите ваш `.hc22000` файл.
+3. **Выбор словарей:** Нажмите "Browse" напротив "Wordlist(s)" и выберите один или несколько `.txt` файлов с паролями (например, из папки `wordlists`).
+4. **Запуск атаки:** Нажмите большую зеленую кнопку **START ATTACK** и ждите результатов!
 
 ---
 
-## 🛠️ For Developers (Running from Source)
+## 🛠️ Для разработчиков (Запуск из исходников)
 
-If you prefer to run the Python script directly or modify the code:
+Если вы хотите запустить Python скрипт напрямую или изменить код:
 
-### Prerequisites
-You need Python 3 installed.
+### Требования
+У вас должен быть установлен Python 3.
 
-1. **Clone the repository:**
+1. **Склонируйте репозиторий:**
 ```bash
 git clone https://github.com/homychokk/HashCatGuiV2.git
 cd HashCatGuiV2
 ```
 
-2. **Install requirements:**
+2. **Установите зависимости:**
 ```bash
 pip install -r requirements.txt
 ```
 
-3. **Run the GUI:**
+3. **Запустите GUI:**
 ```bash
 python hashcat_core/hashcat_pyqt.py
 ```
 
-### Folder Structure
-* `hashcat_core/` - Contains the actual Hashcat executable, kernels, and the Python GUI script.
-* `wordlists/` - A dedicated folder for your password dictionaries.
-* `screenshot.png` - Preview image.
-* `requirements.txt` - Python dependencies.
+### Структура папок
+* `hashcat_core/` - Содержит само ядро Hashcat (`.exe`), модули и Python скрипт интерфейса.
+* `wordlists/` - Отдельная папка для ваших словарей с паролями.
+* `screenshot.png` - Изображение интерфейса.
+* `requirements.txt` - Зависимости Python.
 
 ---
 
-## 👨‍💻 Author / Credits
+## 👨‍💻 Автор
 
-Developed by **[homychokk](https://github.com/homychokk)**. 
-*If you like this project, feel free to give it a ⭐ on GitHub!*
+Разработано **[homychokk](https://github.com/homychokk)**. 
+*Если вам понравился этот проект, не забудьте поставить ему ⭐ на GitHub!*
